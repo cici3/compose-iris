@@ -1,3 +1,4 @@
+from numpy import string_
 import uvicorn
 import os
 import requests
@@ -18,11 +19,25 @@ app.add_event_handler("startup", init_model)
 
 # class which is expected in the payload while training
 class TrainIn(BaseModel):
-    sepal_length: float
-    sepal_width: float
-    petal_length: float
-    petal_width: float
-    flower_class: str
+    # sepal_length: float
+    # sepal_width: float
+    # petal_length: float
+    # petal_width: float
+    # flower_class: str
+    Alcohol: float
+    Malic_acid: float
+    Ash: float
+    Alcalinity_of_ash: float
+    Magnesium: float
+    Total_phenols: float
+    Flavanoids:float
+    Nonflavanoid_phenols: float
+    Proanthocyanins: float
+    Color_intensity: float
+    Hue: float
+    OD280_OD315_of_diluted_wines: float
+    Proline: float
+    wine_class: str         
 
 
 # Route definitions
